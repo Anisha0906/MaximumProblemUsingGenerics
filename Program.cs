@@ -10,7 +10,7 @@ namespace FindMaxUsingGeneric
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(" chooes option\n1. Find maximum among 3 integers");
+            Console.WriteLine(" chooes option\n1. Find maximum among 3 integers\n2. Find maximum among 3 float numbers");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -18,6 +18,11 @@ namespace FindMaxUsingGeneric
                     MaximumNumber maximumNumber = new MaximumNumber();
                     int intValue = maximumNumber.PrintIntegerMaximumNumber(89,45,25);
                     Console.WriteLine("Maximum number among these integers is " + intValue);
+                    break;
+                case 2:
+                    MaximumFloatNumber maximumFloatNumber = new MaximumFloatNumber();
+                    float floatValue = maximumFloatNumber.PrintFloatMaximumNumber(26.5f, 12.9f, 225.07f);
+                    Console.WriteLine("Maximum float number among these float numbers is " + floatValue);
                     break;
             }
             Console.ReadLine();
